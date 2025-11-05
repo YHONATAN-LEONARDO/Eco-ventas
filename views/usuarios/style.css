@@ -1,0 +1,472 @@
+/* ----------------------------- */
+/* Reset y tipografía base */
+/* ----------------------------- */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+/* ----------------------------- */
+/* Fondos */
+.login-body {
+  width: 100%;
+  height: 100vh;
+  background: url("../../public/img/icons/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------- */
+/* Caja del login */
+.login-box {
+  background-color: #fff;
+  border: 0.2rem solid #000;
+  border-radius: 1.5rem;
+  padding: 3rem 4rem;
+  width: 36rem;
+  max-width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 1.5rem rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0 2.5rem rgba(0,0,0,0.15);
+}
+
+.login-box h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  display: inline-block;
+  border-bottom: 0.2rem solid #000;
+  padding-bottom: 0.5rem;
+}
+
+/* ----------------------------- */
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2rem;
+}
+
+.formulario label {
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 500;
+  color: #000;
+}
+
+.formulario input {
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.8rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #000;
+}
+
+.formulario input:focus {
+  border-color: #e60000;
+  box-shadow: 0 0 0.5rem rgba(230,0,0,0.3);
+}
+
+/* ----------------------------- */
+/* Botón */
+.formulario button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: #e60000;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.formulario button:hover {
+  background-color: #000;
+  transform: scale(1.05);
+}
+
+/* ----------------------------- */
+/* Enlaces */
+.formulario p {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #000;
+}
+
+.formulario a.registrate {
+  color: #e60000;
+  font-weight: 600;
+  text-decoration: none;
+}
+.registrate{
+  text-decoration: none;
+  color: #134dc2;
+  font-size: 1.2rem;
+}
+.formulario a.registrate:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* Mensajes de error */
+.mensaje {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff0000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  border: 0.1rem solid #ccc;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 999;
+}
+
+.mensaje.visible {
+  opacity: 1;
+}
+
+/* ----------------------------- */
+/* Botón volver */
+.volver {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 7rem;
+  height: 5rem;
+  display: grid;
+  place-content: center;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  background-color: #ff2626;
+  text-decoration: none;
+  border-radius: 20%;
+  box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.volver:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+/* ----------------------------- */
+/* Responsivo */
+@media (max-width: 500px) {
+  .login-box {
+    width: 90%;
+    padding: 2rem;
+  }
+  .formulario button {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+  .volver {
+    font-size: 3rem;
+    width: 6rem;
+    height: 4rem;
+  }
+}
+
+
+.body-register{
+  height: 100vh;
+  padding: 5rem;
+}
+
+
+
+/* ----------------------------- */
+/* Fondo registro con imagen */
+.body-register {
+  width: 100%;
+  height: 100vh;
+  background: url("/public/img/icons/fondo2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* ----------------------------- */
+/* Caja del registro */
+.login-box {
+  background-color: rgba(255,255,255,0.95); /* semi-transparente */
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  width: 36rem;
+  max-width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+
+
+.login-box h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  display: inline-block;
+  border-bottom: 0.2rem solid #e60000;
+  padding-bottom: 0.5rem;
+  color: #e60000;
+}
+
+/* ----------------------------- */
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2rem;
+}
+
+.formulario label {
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 500;
+  color: #000;
+}
+
+.formulario input {
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.8rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #000;
+}
+
+.formulario input:focus {
+  border-color: #e60000;
+  box-shadow: 0 0 0.5rem rgba(230,0,0,0.3);
+}
+
+/* ----------------------------- */
+/* Botón */
+.formulario button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: #e60000;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.formulario button:hover {
+  background-color: #000;
+  transform: scale(1.05);
+}
+
+/* ----------------------------- */
+/* Enlaces */
+.formulario p {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #000;
+}
+
+.formulario a.registrate {
+  color: #e60000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.registrate {
+  text-decoration: none;
+  color: #134dc2;
+  font-size: 1.2rem;
+}
+
+.formulario a.registrate:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* Mensajes de error */
+.mensaje {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff0000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  border: 0.1rem solid #ccc;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 999;
+}
+
+.mensaje.visible {
+  opacity: 1;
+}
+
+/* ----------------------------- */
+/* Botón volver */
+.volver {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 7rem;
+  height: 5rem;
+  display: grid;
+  place-content: center;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  background-color: #ff2626;
+  text-decoration: none;
+  border-radius: 20%;
+  box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  z-index: 109;
+}
+
+.volver:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+/* ----------------------------- */
+/* Solo estilos para móvil (≤500px) */
+@media (max-width: 500px) {
+
+  body, .body-register, .login-body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical */
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Caja de login/registro centrada */
+  .login-box {
+    width: 90%;
+    max-width: 350px;
+    padding: 2.5rem 2rem;
+    border-radius: 1.2rem;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.2rem solid #e60000;
+    padding-bottom: 0.5rem;
+    color: #e60000;
+  }
+
+  /* Formulario */
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .formulario label {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .formulario input {
+    padding: 0.9rem;
+    font-size: 1.3rem;
+    border-radius: 0.7rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formulario button {
+    padding: 1rem;
+    font-size: 1.4rem;
+    border-radius: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  /* Enlaces */
+  .formulario p {
+    font-size: 1.2rem;
+  }
+
+  .formulario a.registrate {
+    font-size: 1.2rem;
+  }
+
+  /* Mensajes de error */
+  .mensaje {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Botón volver */
+  .volver {
+    top: 1.5rem;
+    left: 1rem;
+    width: 5.5rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+}
